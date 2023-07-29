@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ShowViewOnTopLayerWithSwiftUI
 //
-//  Created by Roro Solutions LLP on 29/07/23.
+//  Created by Gaurav Tak on 29/07/23.
 //
 
 
@@ -25,5 +25,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) { }
+    
+    // MARK: UISceneSession Lifecycle
+    
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+        print("AppDelegate application configurationForConnecting")
+        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+    }
     
 }
