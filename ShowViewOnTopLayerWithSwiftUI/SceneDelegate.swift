@@ -7,13 +7,19 @@
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-      
+    
+    var alertViewWindow: UIWindow?
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         print("----- scene delegate -> scene willConnectTo")
+        if let windowScene = scene as? UIWindowScene {
+            setupAlertViewWindow(in: windowScene)
+        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -34,6 +40,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidEnterBackground(_ scene: UIScene) {
         print("----- scene delegate -> sceneDidEnterBackground")
+    }
+}
+
+extension SceneDelegate {
+    func setupAlertViewWindow(in scene: UIWindowScene) {
+        let alertViewWindow = PassThroughWindow(windowScene: scene)
+        let alertViewController = HostingController(
+            rootView: AlertView()
+        )
+        alertViewController.view.backgroundColor = .clear
+        alertViewWindow.rootViewController = alertViewController
+        alertViewWindow.isHidden = false
+        self.alertViewWindow = alertViewWindow
     }
 }
 

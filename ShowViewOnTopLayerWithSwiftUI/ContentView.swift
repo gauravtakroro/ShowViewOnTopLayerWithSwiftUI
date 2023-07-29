@@ -10,10 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            Button {
+                AlertView.show(alertTitle: "Test", alertMessage: " this is Okay.", primaryButton: .default(Text("Okay"), action: {
+                    print("Okay Tapped")
+                }))
+            } label: {
+              Text("Show Alert")
+            }
         }
         .padding()
     }
