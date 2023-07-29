@@ -25,6 +25,7 @@ struct ContentView: View {
             Button {
                 ProgressViewIndicator.show()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    // auto hiding after 5 seconds
                     ProgressViewIndicator.hide()
                 }
             } label: {

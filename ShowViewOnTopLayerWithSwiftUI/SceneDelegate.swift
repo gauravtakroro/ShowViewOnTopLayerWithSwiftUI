@@ -47,8 +47,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 
 extension SceneDelegate {
-    func setupAlertViewWindow(in scene: UIWindowScene) {
+    private func setupAlertViewWindow(in scene: UIWindowScene) {
         let alertViewWindow = PassThroughWindow(windowScene: scene)
+        // uncommet below statement if Alert View in show with Bottom Layer
+        // progressLoaderWindow.windowLevel = UIWindow.Level.alert
         let alertViewController = HostingController(
             rootView: AlertView()
         )
@@ -58,8 +60,10 @@ extension SceneDelegate {
         self.alertViewWindow = alertViewWindow
     }
     
-    func setupProgressLoaderWindow(in scene: UIWindowScene) {
+    private func setupProgressLoaderWindow(in scene: UIWindowScene) {
         let progressLoaderWindow = PassThroughWindow(windowScene: scene)
+        // uncommet below statement if ProgressLoader View in show with Bottom Layer
+        // progressLoaderWindow.windowLevel = UIWindow.Level.alert
         let progressLoaderViewController = HostingController(
             rootView: ProgressViewIndicator()
         )
