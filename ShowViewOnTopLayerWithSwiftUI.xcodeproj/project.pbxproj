@@ -17,6 +17,7 @@
 		939DEBAD2A757E74003DE0B0 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939DEBAC2A757E74003DE0B0 /* Notification+Extension.swift */; };
 		939DEBAF2A75803E003DE0B0 /* PassThroughWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939DEBAE2A75803E003DE0B0 /* PassThroughWindow.swift */; };
 		939DEBB12A758083003DE0B0 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939DEBB02A758083003DE0B0 /* HostingController.swift */; };
+		939DEBB32A758384003DE0B0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939DEBB22A758384003DE0B0 /* BottomSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		939DEBAC2A757E74003DE0B0 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		939DEBAE2A75803E003DE0B0 /* PassThroughWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughWindow.swift; sourceTree = "<group>"; };
 		939DEBB02A758083003DE0B0 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		939DEBB22A758384003DE0B0 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				939DEBAC2A757E74003DE0B0 /* Notification+Extension.swift */,
 				939DEBAE2A75803E003DE0B0 /* PassThroughWindow.swift */,
 				939DEBB02A758083003DE0B0 /* HostingController.swift */,
+				939DEBB22A758384003DE0B0 /* BottomSheetView.swift */,
 			);
 			path = ShowViewOnTopLayerWithSwiftUI;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			files = (
 				939DEBAB2A757D83003DE0B0 /* AlertView.swift in Sources */,
 				933FF7B72A754BF300944B59 /* AppDelegate.swift in Sources */,
+				939DEBB32A758384003DE0B0 /* BottomSheetView.swift in Sources */,
 				939DEBB12A758083003DE0B0 /* HostingController.swift in Sources */,
 				939DEBAD2A757E74003DE0B0 /* Notification+Extension.swift in Sources */,
 				933FF7A22A75362A00944B59 /* ContentView.swift in Sources */,
