@@ -5,7 +5,6 @@
 //  Created by Gaurav Tak on 29/07/23.
 //
 
-
 import SwiftUI
 
 struct BottomSheetView: View {
@@ -20,6 +19,15 @@ struct BottomSheetView: View {
             } label: {
               Text("Show Alert")
             }
+            
+            Button {
+                ProgressViewIndicator.show()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    ProgressViewIndicator.hide()
+                }
+            } label: {
+              Text("Show Progress View")
+            }.padding(.top, 16)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.top, 28)

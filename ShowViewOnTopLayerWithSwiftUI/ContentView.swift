@@ -23,10 +23,20 @@ struct ContentView: View {
             }
             
             Button {
+                ProgressViewIndicator.show()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    ProgressViewIndicator.hide()
+                }
+            } label: {
+              Text("Show Progress View")
+            }.padding(.top, 16)
+            
+            Button {
                 showBottomSheet = true
             } label: {
               Text("Show Bottom Sheet")
             }.padding(.top, 16)
+           
         }
         .padding()
         .sheet(isPresented: $showBottomSheet) {

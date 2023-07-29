@@ -4,11 +4,13 @@
 //
 //  Created by Gaurav Tak on 29/07/23.
 //
+
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var alertViewWindow: UIWindow?
+    var progressLoaderWindow: UIWindow?
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     func scene(
@@ -19,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print("----- scene delegate -> scene willConnectTo")
         if let windowScene = scene as? UIWindowScene {
             setupAlertViewWindow(in: windowScene)
+            setupProgressLoaderWindow(in: windowScene)
         }
     }
     
@@ -53,6 +56,17 @@ extension SceneDelegate {
         alertViewWindow.rootViewController = alertViewController
         alertViewWindow.isHidden = false
         self.alertViewWindow = alertViewWindow
+    }
+    
+    func setupProgressLoaderWindow(in scene: UIWindowScene) {
+        let progressLoaderWindow = PassThroughWindow(windowScene: scene)
+        let progressLoaderViewController = HostingController(
+            rootView: ProgressViewIndicator()
+        )
+        progressLoaderViewController.view.backgroundColor = .clear
+        progressLoaderWindow.rootViewController = progressLoaderViewController
+        progressLoaderWindow.isHidden = false
+        self.progressLoaderWindow = progressLoaderWindow
     }
 }
 
