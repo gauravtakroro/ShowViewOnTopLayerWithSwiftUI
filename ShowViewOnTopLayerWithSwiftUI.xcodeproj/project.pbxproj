@@ -11,6 +11,7 @@
 		933FF7A22A75362A00944B59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933FF7A12A75362A00944B59 /* ContentView.swift */; };
 		933FF7A42A75362C00944B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933FF7A32A75362C00944B59 /* Assets.xcassets */; };
 		933FF7A72A75362C00944B59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933FF7A62A75362C00944B59 /* Preview Assets.xcassets */; };
+		933FF7B72A754BF300944B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933FF7B62A754BF300944B59 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		933FF7A32A75362C00944B59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		933FF7A62A75362C00944B59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		933FF7B32A75470200944B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		933FF7B62A754BF300944B59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				933FF79F2A75362A00944B59 /* ShowViewOnTopLayerWithSwiftUIApp.swift */,
 				933FF7A12A75362A00944B59 /* ContentView.swift */,
 				933FF7A32A75362C00944B59 /* Assets.xcassets */,
+				933FF7B62A754BF300944B59 /* AppDelegate.swift */,
 				933FF7A52A75362C00944B59 /* Preview Content */,
 			);
 			path = ShowViewOnTopLayerWithSwiftUI;
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933FF7B72A754BF300944B59 /* AppDelegate.swift in Sources */,
 				933FF7A22A75362A00944B59 /* ContentView.swift in Sources */,
 				933FF7A02A75362A00944B59 /* ShowViewOnTopLayerWithSwiftUIApp.swift in Sources */,
 			);
